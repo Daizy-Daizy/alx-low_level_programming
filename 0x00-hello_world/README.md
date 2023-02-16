@@ -1,1 +1,1 @@
-Contains solutions for hallo world
+Contains solutions for hello world
