@@ -9,20 +9,12 @@
  * If str1 > str2, the positive difference of the first unmatched characters.
  */
 
-char *_strcat(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-	int dest_len = 0, i;
-
-	/* Find the length of the destination string */
-	while (dest[dest_len] != '\0')
-	dest_len++;
-	/* Append the source string to the destination string */
-	for (i = 0; src[i] != '\0'; i++)
-	dest[dest_len + i] = src[i];
-
-	/* Add the null terminating character to the end of the string */
-	dest[dest_len + i] = '\0';
-
-	/* Return a pointer to the resulting string */
-	return (dest);
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
